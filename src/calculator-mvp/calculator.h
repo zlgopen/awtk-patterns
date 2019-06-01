@@ -22,7 +22,7 @@
 #ifndef TK_CALCULATOR_H
 #define TK_CALCULATOR_H
 
-#include "iview.h"
+#include "ipresenter.h"
 #include "tkc/str.h"
 
 BEGIN_C_DECLS
@@ -42,11 +42,11 @@ typedef struct _calculator_t {
   str_t expr;
 
   /**
-   * @property {iview_t*} view
+   * @property {ipresenter_t*} presenter
    * @annotation ["private"]
    * 对视图对象的引用。
    */
-  iview_t* view;
+  ipresenter_t* presenter;
 } calculator_t;
 
 /**
@@ -86,14 +86,14 @@ ret_t calculator_remove_char(calculator_t* calculator);
 ret_t calculator_eval(calculator_t* calculator);
 
 /**
- * @method calculator_set_view
- * 设置view对象。
+ * @method calculator_set_presenter
+ * 设置presenter对象。
  * @param {calculator_t*} calculator calculator对象。
- * @param {iview_t*} view view对象。
+ * @param {ipresenter_t*} presenter presenter对象。
  *
  * @return {ret_t} 返回RET_OK表示成功，否则表示失败。
  */
-ret_t calculator_set_view(calculator_t* calculator, iview_t* view);
+ret_t calculator_set_presenter(calculator_t* calculator, ipresenter_t* presenter);
 
 /**
  * @method calculator_destroy

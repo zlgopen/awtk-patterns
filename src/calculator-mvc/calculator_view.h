@@ -43,7 +43,7 @@ typedef struct _calculator_view_t {
    * 模型对象。
    */
   calculator_t* model;
-  
+
   /**
    * @property {window_t*} window
    * @annotation ["readonly"]
