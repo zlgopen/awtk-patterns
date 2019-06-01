@@ -3,7 +3,7 @@
  * Author: AWTK Develop Team
  * Brief:  demo main
  *
- * Copyright (c) 2018 - 2018  Guangzhou ZHIYUAN Electronics Co.,Ltd.
+ * Copyright (c) 2019 - 2019  Guangzhou ZHIYUAN Electronics Co.,Ltd.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -30,13 +30,13 @@ int gui_app_start(int lcd_w, int lcd_h) {
 #elif defined(WIN32)
 #include <windows.h>
 int WINAPI WinMain(HINSTANCE hinstance, HINSTANCE hprevinstance, LPSTR lpcmdline, int ncmdshow) {
-  char app_root[MAX_PATH+1];
+  char app_root[MAX_PATH + 1];
   path_app_root(app_root);
   tk_init(320, 480, APP_SIMULATOR, NULL, app_root);
 #elif defined(WIN32)
 #else
 int main(void) {
-  char app_root[MAX_PATH+1];
+  char app_root[MAX_PATH + 1];
   path_app_root(app_root);
   tk_init(320, 480, APP_SIMULATOR, NULL, app_root);
 #endif

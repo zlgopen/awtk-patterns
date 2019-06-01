@@ -1,9 +1,9 @@
 /**
- * File:   calculator
+ * File:   calculator.c
  * Author: AWTK Develop Team
- * Brief:  main window sources
+ * Brief:  calculator
  *
- * Copyright (c) 2018 - 2018  Guangzhou ZHIYUAN Electronics Co.,Ltd.
+ * Copyright (c) 2019 - 2019  Guangzhou ZHIYUAN Electronics Co.,Ltd.
  *
  * This program is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -25,7 +25,7 @@ static ret_t calculator_on_add_char(void* ctx, event_t* e) {
   wstr_t str;
   widget_t* win = WIDGET(ctx);
   widget_t* button = WIDGET(e->target);
-  widget_t* expr = widget_lookup(win, "expr", TRUE); 
+  widget_t* expr = widget_lookup(win, "expr", TRUE);
   return_value_if_fail(expr != NULL, RET_BAD_PARAMS);
 
   wstr_init(&str, 0);
@@ -40,7 +40,7 @@ static ret_t calculator_on_add_char(void* ctx, event_t* e) {
 static ret_t calculator_on_remove_char(void* ctx, event_t* e) {
   wstr_t str;
   widget_t* win = WIDGET(ctx);
-  widget_t* expr = widget_lookup(win, "expr", TRUE); 
+  widget_t* expr = widget_lookup(win, "expr", TRUE);
   return_value_if_fail(expr != NULL, RET_BAD_PARAMS);
 
   wstr_init(&str, 0);
@@ -56,7 +56,7 @@ static ret_t calculator_on_eval(void* ctx, event_t* e) {
   str_t str;
   double result = 0;
   widget_t* win = WIDGET(ctx);
-  widget_t* expr = widget_lookup(win, "expr", TRUE); 
+  widget_t* expr = widget_lookup(win, "expr", TRUE);
   return_value_if_fail(expr != NULL, RET_BAD_PARAMS);
 
   str_init(&str, 0);
@@ -92,5 +92,3 @@ ret_t application_init() {
 
   return RET_OK;
 }
-
-

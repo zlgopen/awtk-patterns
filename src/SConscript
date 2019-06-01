@@ -4,4 +4,5 @@ import sys
 env=DefaultEnvironment().Clone()
 BIN_DIR=os.environ['BIN_DIR'];
 
-env.Program(os.path.join(BIN_DIR, 'calculator'), Glob('calculator/*.c') + ['assets.c'])
+env.Program(os.path.join(BIN_DIR, 'calculator'), Glob('calculator/*.c') + ['assets.c', 'awtk_main.c'])
+env.Program(os.path.join(BIN_DIR, 'calculator_mvc'), Glob('calculator-mvc/*.c') + ['assets.c', 'awtk_main.c'])

@@ -53,15 +53,15 @@
 #include "assets/inc/images/arrow_down_n.data"
 #include "assets/inc/images/arrow_left_n.data"
 #include "assets/inc/images/edit_clear_p.data"
-#endif/*WITH_STB_IMAGE*/
+#endif /*WITH_STB_IMAGE*/
 #ifdef WITH_VGCANVAS
-#endif/*WITH_VGCANVAS*/
+#endif /*WITH_VGCANVAS*/
 #if defined(WITH_STB_FONT) || defined(WITH_FT_FONT)
 #include "assets/inc/fonts/default.res"
-#else/*WITH_STB_FONT or WITH_FT_FONT*/
+#else /*WITH_STB_FONT or WITH_FT_FONT*/
 #include "assets/inc/fonts/default.data"
-#endif/*WITH_STB_FONT or WITH_FT_FONT*/
-#endif/*WITH_FS_RES*/
+#endif /*WITH_STB_FONT or WITH_FT_FONT*/
+#endif /*WITH_FS_RES*/
 
 ret_t assets_init(void) {
   assets_manager_t* rm = assets_manager();
@@ -100,7 +100,7 @@ ret_t assets_init(void) {
   assets_manager_add(rm, style_window1);
   assets_manager_add(rm, font_default);
 #ifdef WITH_VGCANVAS
-#endif/*WITH_VGCANVAS*/
+#endif /*WITH_VGCANVAS*/
 #endif
 
   tk_init_assets();
