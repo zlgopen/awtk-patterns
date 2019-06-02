@@ -1,7 +1,7 @@
 ﻿#include "gtest/gtest.h"
 #include "calculator-mvc/calculator.h"
 
-TEST(Calculator, basic) {
+TEST(CalculatorMVC, basic) {
   calculator_t* calculator = calculator_create();
 
   ASSERT_STREQ(calculator->expr.str, "");

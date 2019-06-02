@@ -35,6 +35,12 @@ MVC_SOURCES = [
  os.path.join(APP_SRC, 'calculator-mvc/calculator.c'),
 ]
 
+MVVM_SOURCES = [
+ 'mvvm_calculator_test.cc',
+ os.path.join(APP_SRC, 'calculator-mvvm/calculator.c'),
+]
+
 env.Program(os.path.join(BIN_DIR, 'runTestMVC'), SOURCES + MVC_SOURCES);
+env.Program(os.path.join(BIN_DIR, 'runTestMVVM'), SOURCES + MVVM_SOURCES);
 
 

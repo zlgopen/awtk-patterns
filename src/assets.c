@@ -3,9 +3,7 @@
 #ifndef WITH_FS_RES
 #include "assets/inc/strings/zh_CN.data"
 #include "assets/inc/strings/en_US.data"
-#include "assets/inc/styles/main.data"
 #include "assets/inc/styles/default.data"
-#include "assets/inc/styles/window1.data"
 #include "assets/inc/ui/calculator.data"
 #ifdef WITH_STB_IMAGE
 #include "assets/inc/images/checked.res"
@@ -95,9 +93,7 @@ ret_t assets_init(void) {
   assets_manager_add(rm, image_arrow_down_n);
   assets_manager_add(rm, image_arrow_left_n);
   assets_manager_add(rm, image_edit_clear_p);
-  assets_manager_add(rm, style_main);
   assets_manager_add(rm, style_default);
-  assets_manager_add(rm, style_window1);
   assets_manager_add(rm, font_default);
 #ifdef WITH_VGCANVAS
 #endif /*WITH_VGCANVAS*/
