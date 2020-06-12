@@ -1,7 +1,6 @@
 #include "awtk.h"
 #include "base/assets_manager.h"
-
-#include "assets_default.inc"
+#include "../assets/__assets_default.inc"
 
 #ifndef APP_THEME
 #define APP_THEME "default"
