@@ -41,10 +41,10 @@ GTEST_API_ int main(int argc, char** argv) {
   printf("Running main() from gtest_main.cc\n");
   testing::InitGoogleTest(&argc, argv);
 
+  platform_prepare();
   system_info_init(APP_SIMULATOR, NULL, "./demos");
   tk_init_internal();
 
-  assets_init();
   tk_init_assets();
   tk_ext_widgets_init();
 
