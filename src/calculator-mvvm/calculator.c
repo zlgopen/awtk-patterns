@@ -2,7 +2,7 @@
 #include "tkc/utils.h"
 #include "mvvm/base/utils.h"
 #include "calculator.h"
-#include "tkc/expr_eval.h"
+#include "tkc/fscript.h"
 
 /***************calculator***************/;
 calculator_t* calculator_create(void) {
